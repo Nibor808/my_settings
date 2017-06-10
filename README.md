@@ -1,0 +1,1 @@
+settings for vscode, bash_profile
