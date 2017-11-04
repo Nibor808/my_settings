@@ -1,8 +1,10 @@
-PATH="$PATH:/usr/local/opt/gnupg/libexec/gpgbin"
-PATH="$PATH:./node_modules/.bin"
-export PATH="$PATH:/path/to/elixir/bin"
+export PATH="$PATH:/usr/local/opt/gnupg/libexec/gpgbin"
+export PATH="$PATH:./node_modules/.bin"
+export PATH="$PATH:/usr/local/bin/elixir/bin"
 export PATH="$PATH:$(go env GOPATH)/bin"
+export PATH="$PATH:/user/local/sbin"
 export GOPATH=$(go env GOPATH)
+# echo /Applications/Postgres.app/Contents/Versions/latest/bin
 
 # Git branch in prompt.
 export CLICOLOR=1
@@ -17,7 +19,10 @@ parse_git_branch() {
 
 }
 
-export PS1="\u @ \w\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "
+export PS1="\[\e[34m\]\u @ \[\e[36m\]\w\[\e[32m\]$(parse_git_branch)\[\e[39m\] $ "
+
+# set timestamp for path add this in PS1
+# \[\e[0;35m\]\@\[\e[m\]
 
 # Setting PATH for Python 3.5
 # The original version is saved in .profile.pysave
