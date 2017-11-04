@@ -11,11 +11,11 @@
   "editor.renderWhitespace": "none",
   "editor.renderLineHighlight": "none",
   "window.zoomLevel": 0,
-  "git.enabled": false,
+  "git.enabled": true,
   "editor.insertSpaces": true,
   "editor.detectIndentation": false,
-  "editor.snippetSuggestions": "none",
-  "eslint.enable": false,
+  "editor.snippetSuggestions": "bottom",
+  "eslint.enable": true,
   "workbench.iconTheme": "material-icon-theme",
   "editor.minimap.enabled": true,
   "editor.suggestOnTriggerCharacters": true,
@@ -23,8 +23,10 @@
   "editor.fontWeight": "100",
   "editor.parameterHints": false,
   "terminal.integrated.cursorBlinking": true,
-  "emmet.useNewEmmet": true,
   "editor.renderIndentGuides": true,
-  "workbench.colorTheme": "Operator Mono Dark Theme",
-  "workbench.welcome.enabled": false
+  "workbench.colorTheme": "Nord",
+  "editor.letterSpacing": 0.5,
+  "editor.fontLigatures": true,
+  "files.insertFinalNewline": true,
+  "editor.tabCompletion": true
 }
