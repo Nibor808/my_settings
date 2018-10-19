@@ -1,9 +1,8 @@
 {
   "editor.tabSize": 2,
   "editor.fontSize": 15,
-  "editor.letterSpacing": 0.75,
-  "editor.fontLigatures": true,
-  "editor.fontFamily": "Arimo",
+  "editor.letterSpacing": 0.5,
+  "editor.fontFamily": "Roboto Mono",
   "editor.wordWrap": "on",
   "files.trimTrailingWhitespace": true,
   "html.format.indentInnerHtml": true,
@@ -14,40 +13,53 @@
   "editor.renderWhitespace": "none",
   "editor.renderLineHighlight": "none",
   "editor.formatOnSave": true,
-  "window.zoomLevel": 0,
+  "window.zoomLevel": -0.5,
   "git.enabled": true,
   "editor.insertSpaces": true,
   "editor.detectIndentation": false,
-  "editor.snippetSuggestions": "bottom",
   "eslint.enable": true,
   "editor.minimap.enabled": true,
   "editor.suggestOnTriggerCharacters": true,
   "material-icon-theme.showUpdateMessage": false,
-  "editor.parameterHints": false,
   "terminal.integrated.cursorBlinking": true,
   "editor.renderIndentGuides": true,
   "files.insertFinalNewline": true,
-  "editor.tabCompletion": true,
+  "editor.tabCompletion": "on",
   "editor.autoIndent": false,
   "workbench.colorTheme": "Nord",
   "eslint.alwaysShowStatus": true,
   "emmet.includeLanguages": {
     "javascript": "javascriptreact"
   },
-  "typescript.autoImportSuggestions.enabled": false,
   "files.watcherExclude": {
     "**/.git/objects/**": true,
     "**/.git/subtree-cache/**": true,
+    "**/build-*": true,
+    "**/deploy-*": true,
     "**/node_modules/**": true
   },
-  "autoprefixer.formatOnSave": true,
   "workbench.colorCustomizations": {
-    "editorIndentGuide.activeBackground": "#00c3ff5e"
+    "editorError.foreground": "#FC1E34"
   },
   "workbench.iconTheme": "material-icon-theme",
   "workbench.editor.closeEmptyGroups": false,
   "window.titleBarStyle": "custom",
   "terminal.external.osxExec": "iTerm.app",
   "terminal.integrated.fontFamily": "Monaco",
-  "terminal.integrated.fontSize": 12
+  "terminal.integrated.fontSize": 12,
+  "window.restoreWindows": "all",
+  "debug.allowBreakpointsEverywhere": true,
+  "debug.inlineValues": true,
+  "javascript.suggest.autoImports": true,
+  "javascript.preferences.quoteStyle": "single",
+  "editor.fontWeight": "300",
+  "sync.gist": "55e185d7d956ce9e793a95a4e826fb1a",
+  "files.exclude": {
+    "**/.idea": true,
+    "**/.vscode": true
+  },
+  "search.exclude": {
+    "**/build-*": true,
+    "**/deploy-*": true
+  }
 }
