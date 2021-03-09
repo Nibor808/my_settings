@@ -1,1 +1,1 @@
-settings for vscode, bash_profile
+settings for bash, zsh, vim
