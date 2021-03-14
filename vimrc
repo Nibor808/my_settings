@@ -25,10 +25,7 @@ set incsearch
 set hlsearch
 set virtualedit=onemore
 set encoding=UTF-8
-set guicursor=a:block-Cursor/lCursor
-set guicursor+=a:ver35-Cursor
-set guicursor+=a:hor50-Cursor
-set guicursor+=a:block-Cursor-blinkwait175-blinkoff700-blinkon700
+set guicursor=a:ver35-Cursor-blinkwait175-blinkoff700-blinkon700
 set splitbelow
 set clipboard=unnamedplus
 set swapfile
@@ -57,6 +54,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
 Plug 'elzr/vim-json'
 Plug 'mxw/vim-jsx'
 Plug 'elixir-lang/vim-elixir'
@@ -97,13 +95,18 @@ let mapleader = ","
 
 let g:ale_linters = {
 \   'javascript': ['eslint'],
-\   'typescript': ['eslint'],
+\   'javascriptreact': ['eslint'],
+\   'typescript': ['eslint', 'tserver'],
+\   'typescriptreact': ['eslint', 'tserver'],
 \   'go': ['golint']
 \}
 
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'javascript': ['eslint', 'prettier'],
+\   'typescript': ['eslint', 'prettier'],
+\   'javascriptreact': ['eslint', 'prettier'],
+\   'typescriptreact': ['eslint', 'prettier'],
 \   'css': ['prettier'],
 \   'scss': ['prettier'],
 \   'html': ['prettier'],
