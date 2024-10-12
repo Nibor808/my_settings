@@ -1,4 +1,5 @@
 filetype indent on
+syntax enable
 
 set hidden
 set wildmenu
@@ -14,8 +15,8 @@ set visualbell
 set mouse=a
 set cmdheight=2
 set number
-set tabstop=2
-set softtabstop=2
+set tabstop=4
+set softtabstop=4
 set shiftwidth=2
 set expandtab
 set textwidth=100
@@ -25,7 +26,8 @@ set incsearch
 set hlsearch
 set virtualedit=onemore
 set encoding=UTF-8
-set guicursor=a:ver35-Cursor-blinkwait175-blinkoff700-blinkon700
+set guicursor=i:ver25-Cursor-blinkwait175-blinkoff700-blinkon700
+set guicursor=n-v:block-Cursor-blinkwait175-blinkoff700-blinkon700
 set splitbelow
 set clipboard=unnamedplus
 set swapfile
@@ -40,7 +42,7 @@ Plug 'scrooloose/nerdcommenter'
 " Git
 Plug 'airblade/vim-gitgutter'
 Plug 'xuyuanp/nerdtree-git-plugin'
-Plug 'tpope/vim-fugitive'
+" Plug 'tpope/vim-fugitive'
 
 " Formatting
 Plug 'mattn/emmet-vim'
@@ -48,6 +50,7 @@ Plug 'godlygeek/tabular'
 Plug 'townk/vim-autoclose'
 Plug 'gregsexton/matchtag'
 Plug 'prettier/vim-prettier'
+Plug 'junegunn/vim-easy-align'
 
 " Languages
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -74,7 +77,7 @@ call plug#end()
 if (has("termguicolors"))
  set termguicolors
 endif
-syntax enable
+
 colorscheme nord
 
 " Auto indent pasted text
@@ -96,7 +99,7 @@ let mapleader = ","
 let g:ale_linters = {
 \   'javascript': ['eslint'],
 \   'javascriptreact': ['eslint'],
-\   'typescript': ['eslint', 'tserver'],
+\   'typescript': ['tslint', 'tserver'],
 \   'typescriptreact': ['eslint', 'tserver'],
 \   'go': ['golint']
 \}
@@ -104,9 +107,9 @@ let g:ale_linters = {
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'javascript': ['eslint', 'prettier'],
-\   'typescript': ['eslint', 'prettier'],
+\   'typescript': ['tslint', 'prettier'],
 \   'javascriptreact': ['eslint', 'prettier'],
-\   'typescriptreact': ['eslint', 'prettier'],
+\   'typescriptreact': ['tserver', 'prettier'],
 \   'css': ['prettier'],
 \   'scss': ['prettier'],
 \   'html': ['prettier'],
@@ -129,7 +132,7 @@ let g:go_auto_type_info = 1
 
 let g:airline#extensions#ale#enabled = 1
 
-let g:coc_global_extensions = ['coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-tsserver', 'coc-go', 'coc-elixir', 'coc-docker', 'coc-sql', 'coc-sh']
+let g:coc_global_extensions = ['coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-tsserver', 'coc-go', 'coc-elixir', 'coc-docker', 'coc-sql', 'coc-sh', 'coc-docker']
 
 " NERDTree
 map <C-n> :NERDTreeToggle<CR>
